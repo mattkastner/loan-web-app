@@ -1,0 +1,76 @@
+@import "../styles/variables.scss";
+
+.lenders {
+  display: grid;
+  gap: 0.5rem;
+  grid-auto-flow: column;
+  padding: 4%;
+  align-items: center;
+}
+
+.mortgage-company {
+  position: relative;
+}
+
+.company-logo {
+  height: 4rem;
+  width: 6rem;
+  z-index: 1;
+  border-radius: 8%;
+  box-shadow: $shifted-box-shadow;
+}
+
+.honcho-profile {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -15%;
+  right: -10%;
+  z-index: 3;
+}
+
+.nmls {
+  font-size: 1vw;
+  position: absolute;
+  text-align: center;
+
+  bottom: 8%;
+  left: 8%;
+}
+
+.company-rate {
+  font-size: 2vw;
+  text-align: center;
+  display: flex;
+  flex: column;
+  line-height: 1em;
+  height: 1em;
+}
+
+.rate-payment {
+  font-size: 2vw;
+  text-align: center;
+  //   display: flex;
+  //   flex: column;
+  line-height: 1em;
+  height: 1em;
+}
+
+.rate-button {
+  background-color: $background-primary;
+  height: 1.5rem;
+  width: 4rem;
+  border-radius: 10%;
+  border: none;
+  color: $font-color-tertiary;
+  font-size: 2vw;
+}
+
+hr {
+  background-color: lightblue;
+  width: 92%;
+  align-items: center;
+  height: 0.1vh;
+  border: none;
+}

@@ -1,10 +1,10 @@
-import './App.css';
+import "./App.scss";
+import LenderRates from "./components/LenderRates";
 
 function App() {
-  return (
-    <div className="loan-app">
-    </div>
-  );
+  return <div className="loan-app">
+    <LenderRates/>
+  </div>;
 }
 
 export default App;
