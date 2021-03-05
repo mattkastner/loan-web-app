@@ -1,10 +1,83 @@
 @import "../styles/variables.scss";
 
+.lender-rates-container {
+  padding: 5%;
+}
+
+.header-4 {
+  color: #b7b7b7;
+  display: block;
+  width: 220px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  height: 12px;
+  width: 36px;
+  bottom: 0;
+  background-color: #e64732;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: -2px;
+  bottom: -2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  border: solid #ccc 1px;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  border: solid #e64732 1px;
+}
+
 .lenders {
+  padding: 2%;
   display: grid;
-  gap: 0.5rem;
   grid-auto-flow: column;
-  padding: 4%;
   align-items: center;
 }
 
@@ -21,56 +94,73 @@
 }
 
 .honcho-profile {
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
   position: absolute;
-  bottom: -15%;
-  right: -10%;
+  bottom: -3%;
+  right: 12%;
   z-index: 3;
 }
 
 .nmls {
-  font-size: 1vw;
+  font-size: 0.5vh;
   position: absolute;
   text-align: center;
-
   bottom: 8%;
   left: 8%;
 }
 
 .company-rate {
+  color: #b7b7b7;
   font-size: 2vw;
   text-align: center;
-  display: flex;
-  flex: column;
-  line-height: 1em;
-  height: 1em;
+}
+
+.rate-num {
+  color: black;
+}
+
+.rate-lock {
+  color: black;
 }
 
 .rate-payment {
+  color: #b7b7b7;
   font-size: 2vw;
   text-align: center;
-  //   display: flex;
-  //   flex: column;
-  line-height: 1em;
-  height: 1em;
+}
+
+.payment {
+  color: black;
 }
 
 .rate-button {
   background-color: $background-primary;
-  height: 1.5rem;
-  width: 4rem;
-  border-radius: 10%;
+  border-radius: 8%;
   border: none;
-  color: $font-color-tertiary;
+  color: white;
   font-size: 2vw;
+  padding: 10px 10px 10px 10px;
+  box-shadow: $shifted-box-shadow;
 }
 
 hr {
-  background-color: lightblue;
-  width: 92%;
+  background-color: #e7e9f3;
+  width: 100%;
   align-items: center;
   height: 0.1vh;
   border: none;
+}
+
+@media only screen and (min-width: 569px) {
+  #honcho-profile {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3%;
+    right: 12%;
+    z-index: 3;
+  }
 }
