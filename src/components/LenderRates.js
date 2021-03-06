@@ -7,14 +7,16 @@ export default function LenderRates() {
       <h4 className="header-4">
         Update your estimate with a local lenders’ estimated rate:
       </h4>
-      <label className="switch">
-        <input type="checkbox" />
-        <span className="slider round"></span>
-      </label>
-      <label className="switch">
-        <input type="checkbox" />
-        <span className="slider round"></span>
-      </label>
+      <div className="toggle-buttons">
+        <label className="switch">
+          <input type="checkbox" />
+          <span className="slider round"></span>
+        </label>
+        <label className="switch">
+          <input type="checkbox" />
+          <span className="slider round"></span>
+        </label>
+      </div>
       <hr></hr>
 
       <div className="lenders">
@@ -128,7 +130,9 @@ export default function LenderRates() {
       <h4 className="header-4">
         Get No-Haggle Bids, With Our Price Transparency
       </h4>
-      <button className="competing-button">GET COMPETING OFFERS</button>
+      <div className="competing-button-container">
+        <button className="competing-button">GET COMPETING OFFERS</button>
+      </div>
     </div>
   );
 }

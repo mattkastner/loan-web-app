@@ -1,7 +1,7 @@
 @import "../styles/variables.scss";
 
 .lender-rates-container {
-  padding: 5%;
+  padding: 4%;
 }
 
 .header-4 {
@@ -11,11 +11,17 @@
   padding: 5%;
 }
 
+.toggle-buttons {
+  position: relative;
+  right: -72%;
+}
+
 /* The switch - the box around the slider */
-.switch {
+.switch,
+.switch-2 {
   position: relative;
   display: inline-block;
-  width: 45px;
+  width: 47px;
   height: 24px;
 }
 
@@ -30,10 +36,11 @@
 .slider {
   position: absolute;
   cursor: pointer;
+  content: "";
   height: 12px;
   width: 36px;
   bottom: 0;
-  background-color: #e64732;
+  background-color: #f17270;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -52,6 +59,7 @@
 
 input:checked + .slider {
   background-color: #ccc;
+  content: "";
 }
 
 input:focus + .slider {
@@ -63,6 +71,7 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
   border: solid #ccc 1px;
+  content: "off";
 }
 
 /* Rounded sliders */
@@ -72,11 +81,11 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-  border: solid #e64732 1px;
+  border: solid #f17270 1px;
 }
 
 .lenders {
-  padding: 2%;
+  //   padding: 2%;
   display: grid;
   grid-auto-flow: column;
   align-items: center;
@@ -87,20 +96,24 @@ input:checked + .slider:before {
 }
 
 .company-logo {
-  height: 4rem;
-  width: 6rem;
+  //   height: 4rem;
+  //   width: 6rem;
+  height: 51px;
+  width: 79px;
   z-index: 1;
   border-radius: 8%;
   box-shadow: $shifted-box-shadow;
 }
 
 .honcho-profile {
-  height: 1.5rem;
-  width: 1.5rem;
+  //   height: 1.5rem;
+  //   width: 1.5rem;
+  height: 27px;
+  width: 27px;
   border-radius: 50%;
   position: absolute;
-  bottom: -3%;
-  right: 12%;
+  bottom: -2%;
+  right: 20%;
   z-index: 3;
 }
 
@@ -114,36 +127,34 @@ input:checked + .slider:before {
 
 .company-rate {
   color: #b7b7b7;
-  font-size: 2vw;
+  font-size: 0.2em;
   text-align: center;
+  margin-left: -20px;
 }
 
-.rate-num {
-  color: black;
-}
-
-.rate-lock {
+.rate-num,
+.rate-lock,
+.payment {
   color: black;
 }
 
 .rate-payment {
   color: #b7b7b7;
-  font-size: 2vw;
+  font-size: 0.2em;
   text-align: center;
-}
-
-.payment {
-  color: black;
+  margin-left: -20px;
 }
 
 .rate-button {
   background-color: $background-primary;
-  border-radius: 8%;
+  border-radius: 10%;
   border: none;
   color: white;
-  font-size: 2vw;
-  padding: 10px 10px 10px 10px;
+  font-size: 0.2em;
+  padding: 10px 10px;
   box-shadow: $shifted-box-shadow;
+  //   height: 27px;
+  //   width: 80px;
 }
 
 hr {
@@ -160,36 +171,18 @@ hr {
   padding: 5%;
 }
 
+.competing-button-container {
+  text-align: center;
+}
+
 .competing-button {
   background-color: #ffffff;
-  border-radius: 8%;
+  border-radius: 10%;
   border-color: $background-primary;
   color: $background-primary;
-  padding: 8px 8px 8px 8px;
+  outline: none;
+  padding: 10px 10px;
   font-size: 0.875em;
-  align-items: center;
-}
-
-@media only screen and (min-width: 600px) {
-  .lender-rates-container {
-    background-color: blue;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .lender-rates-container {
-    background-color: red;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .lender-rates-container {
-    background-color: yellow;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .lender-rates-container {
-    background-color: green;
-  }
+  height: 25%;
+  width: 100%;
 }
