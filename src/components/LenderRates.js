@@ -124,7 +124,11 @@ export default function LenderRates() {
         </div>
         <button className="rate-button">Use Rate</button>
       </div>
-      <hr></hr>
+      <div className="or">- OR -</div>
+      <h4 className="header-4">
+        Get No-Haggle Bids, With Our Price Transparency
+      </h4>
+      <button className="competing-button">GET COMPETING OFFERS</button>
     </div>
   );
 }

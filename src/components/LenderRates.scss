@@ -8,6 +8,7 @@
   color: #b7b7b7;
   display: block;
   width: 220px;
+  padding: 5%;
 }
 
 /* The switch - the box around the slider */
@@ -153,14 +154,42 @@ hr {
   border: none;
 }
 
-@media only screen and (min-width: 569px) {
-  #honcho-profile {
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -3%;
-    right: 12%;
-    z-index: 3;
+.or {
+  color: #b7b7b7;
+  text-align: center;
+  padding: 5%;
+}
+
+.competing-button {
+  background-color: #ffffff;
+  border-radius: 8%;
+  border-color: $background-primary;
+  color: $background-primary;
+  padding: 8px 8px 8px 8px;
+  font-size: 0.875em;
+  align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .lender-rates-container {
+    background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .lender-rates-container {
+    background-color: red;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .lender-rates-container {
+    background-color: yellow;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .lender-rates-container {
+    background-color: green;
   }
 }
