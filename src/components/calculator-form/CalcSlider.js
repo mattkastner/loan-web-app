@@ -30,10 +30,10 @@ class CalcSlider extends Component {
     return (
       <SliderTooltip
         prefixCls="rc-slider-tooltip"
-        overlay={`${value} %`}
-        visible={dragging}
+        overlay={`${this.props.percentage ? value/100 : value} %`}
+        visible={true}
         placement="right"
-        tipProps={{ overlayClassName: 'slider-style' }}
+        tipProps={{ overlayClassName: "slider-style" }}
         key={index}
       >
         <Handle value={value} {...restProps} />
@@ -43,12 +43,10 @@ class CalcSlider extends Component {
 
   render() {
     return (
-      <div style={{ margin: 50, width: "40vw" }}>
-        <p>{this.state.value}</p>
-        <p>Basic Slider</p>
+      <div style={{ marginTop: 10, marginBottom: 10, width: "100%" }}>
         <Slider
           min={0}
-          max={100}
+          max={this.props.max}
           value={this.state.value}
           onChange={this.onSliderChange}
           handle={this.handle}

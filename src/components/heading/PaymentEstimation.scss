@@ -1,0 +1,94 @@
+.payment-estimation {
+  width: 100%;
+  height: 180px;
+  transition: height 200ms;
+  box-shadow: 0px 4px 16px rgba(195, 201, 227, 0.48);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 60px;
+
+  h5 {
+    font-size: 18px;
+    line-height: 21px;
+    color: #b7b7b7;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+    color: #22243d;
+    span {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.02em;
+      color: #979aa6;
+    }
+  }
+
+  .see-details {
+    width: 140px;
+    height: 44px;
+    position: absolute;
+    bottom: -22px;
+    left: 100px;
+    border: none;
+    box-shadow: 10px 10px 8px rgba(46, 98, 224, 0.1);
+    border-radius: 10px;
+    background: #433eed;
+    color: rgba(255, 255, 255, 0.88);
+  }
+}
+
+.payment-estimation--extend {
+  height: 380px;
+
+  //CSS
+
+  body {
+    color: #d6eaff;
+    background: #202125;
+    padding: 10px 50px 50px;
+  }
+
+  a {
+    color: #0ebeff;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+    font-weight: 100;
+  }
+
+}
+.donut-container {
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 116px;
+  height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  -ms-transform: rotate(-180deg); /* IE 9 */
+  transform: rotate(-180deg);
+}
+
+.donut-layer {
+  position: absolute;
+  margin: 4px 30px 0px 30px;
+}
+
+[data-donutty] {
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: middle;
+}
