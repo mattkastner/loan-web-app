@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+
+.horizontal-slider {
+  width: 400px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  color: $font-color-secondary;
+//   background: $background-primary;
+
+}
+.calculator-thumb {
+  height: 10px;
+  width: 10px;
+  background: $background-primary;
+  border-radius: 50%;
+  border: 9px solid white;
+  box-shadow: 0px 0px 4px rgba(46, 98, 224, 0.2);
+  &:focus {
+    outline: none;
+  }
+}
+
+.calculator-track {
+  border-radius: 6px;
+  // border: 6px solid $background-primary;
+  box-shadow: 0px 0px 4px rgba(46, 98, 224, 0.2);
+  background-color: $background-primary;
+}
+
+.slider-style {
+  color: red;
+}
