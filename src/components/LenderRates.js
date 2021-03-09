@@ -8,14 +8,13 @@ export default function LenderRates() {
         Update your estimate with a local lenders’ estimated rate:
       </div>
       <div className="toggle-buttons">
-        <label className="switch">
-          <input type="checkbox" />
-          <span className="slider round"></span>
-        </label>
-        <label className="switch">
-          <input type="checkbox" />
-          <span className="slider round"></span>
-        </label>
+      <label class="switch">
+ <input type="checkbox" id="togBtn"/>
+ <div class="slider round">
+  <span class="on">ON</span>
+  <span class="off">OFF</span>
+ </div>
+</label>
       </div>
       <hr></hr>
 
