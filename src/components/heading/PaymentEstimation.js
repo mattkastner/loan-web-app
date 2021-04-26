@@ -3,7 +3,7 @@ import "./PaymentEstimation.scss";
 import eclipse1 from "../../assets/Ellipse 22.png";
 import eclipse2 from "../../assets/Ellipse 23.png";
 import eclipse3 from "../../assets/Ellipse 24.png";
-import Donut from "../donut";
+import Donut from "../donut/Donut";
 import { connect } from "react-redux";
 
 class PaymentEstimation extends Component {
@@ -16,7 +16,7 @@ class PaymentEstimation extends Component {
   render() {
     let principle = this.props.monthlyPayment;
     let pmi = ((this.props.homePrice - this.props.downPayment) * 0.01) / 12;
-    let taxesAmount = ((this.props.taxes / 1000) * this.props.homePrice) / 12;
+    let taxesAmount = ((this.props.taxes / 100) * this.props.homePrice) / 12;
     let totalMonthly = principle + pmi + taxesAmount;
 
     return (

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Slider, { SliderTooltip } from "rc-slider";
-
 import { connect } from "react-redux";
 
 import "rc-slider/assets/index.css";
