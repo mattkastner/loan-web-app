@@ -1,5 +1,8 @@
-import React from "react";
-class CircularProgressBar extends React.Component {
+import React, { Component } from "react";
+
+import { connect } from "react-redux";
+
+class CircularProgressBar extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -15,11 +18,9 @@ class CircularProgressBar extends React.Component {
     // Arc length at 100% coverage is the circle circumference
     const dashArray = radius * Math.PI * 2;
     // Scale 100% coverage overlay with the actual percent
-    let percent_circle1 = 75; //percent
-    let percent_circle2 = 15; //percent
 
-    const dashOffsetCircle2 = 375 - (360 * percent_circle2) / 100;
-    const dashOffsetCircle1 = 375 - (360 * percent_circle1) / 100;
+    const dashOffsetCircle2 = 375 - (360 * this.props.circle2) / 100;
+    const dashOffsetCircle1 = 375 - (360 * this.props.circle1) / 100;
 
     return (
       <svg
@@ -72,7 +73,7 @@ class CircularProgressBar extends React.Component {
           dy=".3em"
           textAnchor="middle"
         >
-          {`$1,575`}
+          {`$${Math.trunc(this.props.total)}`}
         </text>
         <text
           className="circle-heading"
@@ -98,7 +99,7 @@ class CircularProgressBar extends React.Component {
           dy=".3em"
           textAnchor="middle"
         >
-          {`@4.171%`}
+          {`@${this.props.interest}%`}
         </text>
       </svg>
     );
@@ -107,28 +108,47 @@ class CircularProgressBar extends React.Component {
 
 CircularProgressBar.defaultProps = {
   sqSize: 200,
-  percentage: 25,
   strokeWidth: 10,
 };
 
-export class Donut extends React.Component {
-  constructor(props) {
-    super(props);
+class Donut extends Component {
+  constructor() {
+    super();
 
-    this.state = {
-      percentage: 25,
-    };
   }
 
   render() {
+    let {
+      monthlyPayment,
+      homePrice,
+      downPayment,
+      taxes,
+      interestRate,
+    } = this.props;
+    let principle = monthlyPayment;
+    let pmi = ((homePrice - downPayment) * 0.01) / 12;
+    let monthlyTaxes = (homePrice * (taxes / 100)) / 12;
+
+    let total = principle + pmi + monthlyTaxes;
+
     return (
       <div style={{ marginTop: "1%" }}>
         <CircularProgressBar
           strokeWidth="16"
           sqSize="140"
-          percentage={this.state.percentage}
+          circle1={(principle / total) * 100}
+          circle2={(pmi / total) * 100}
+          interest={interestRate}
+          total={total}
         />
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return state;
+}
+
+//we are curring the Auth component
+export default connect(mapStateToProps, {})(Donut);

@@ -1,14 +1,30 @@
-@import './styles/styles.scss';
+@import "./styles/styles.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
 }
 .menu {
   position: absolute;
   left: 15px;
   top: 15px;
+  height: 40px;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  .arrow {
+    height: 100%;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.144);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background: rgba(128, 128, 128, 0.048);
+    }
+  }
 }
 
 #app {
