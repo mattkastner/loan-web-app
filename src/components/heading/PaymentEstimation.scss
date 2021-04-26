@@ -8,10 +8,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin-bottom: 60px;
 
   h5 {
@@ -33,22 +32,32 @@
     }
   }
 
+  .marginTop5 {
+    margin-top: 4%;
+  }
+
   .see-details {
     width: 140px;
     height: 44px;
     position: absolute;
     bottom: -22px;
-    left: 100px;
+    left: '50%';
     border: none;
     box-shadow: 10px 10px 8px rgba(46, 98, 224, 0.1);
     border-radius: 10px;
     background: #433eed;
     color: rgba(255, 255, 255, 0.88);
+    outline: none;
+  }
+  .btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .payment-estimation--extend {
-  height: 380px;
+  height: 400px;
 
   //CSS
 
@@ -66,8 +75,130 @@
     margin-bottom: 30px;
     font-weight: 100;
   }
-
 }
+.font-size-24 {
+  font-size: 44px;
+}
+
+.text-light-grey {
+  color: #b7b7b7;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 325px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  span {
+    font-size: 14px;
+    span {
+      position: absolute;
+      font-size: 16px;
+      font-weight: 500;
+      color: black;
+      margin-top: 5px;
+    }
+  }
+}
+.hr {
+  height: 1px;
+  border-width: 0;
+  color: gray;
+  background-color: lightgray;
+  width: 325px;
+  margin-top: 30px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  font-weight: bolder;
+  width: 250px;
+  padding: 5px;
+  span {
+    font-size: smaller;
+    justify-self: start;
+    font-size: 12px;
+    position: relative;
+    left: 15px;
+  }
+  #amortization {
+    margin-bottom: 5px;
+  }
+  #table {
+    font-size: smaller;
+    justify-self: end;
+  }
+}
+.property-tax {
+  margin-bottom: 15px;
+}
+.light-gray {
+  color: #979aa6;
+}
+
+.donut-container {
+  background: white;
+  box-shadow: -2px -2px 34px -17px rgba(0, 0, 0, 0.75) !important;
+  border-radius: 50%;
+  padding: 19px;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  -ms-transform: rotate(0deg) !important; /* IE 9 */
+  transform: rotate(0deg) !important;
+  margin-top: 1%;
+}
+
+.text-position {
+  position: absolute;
+  top: 40px;
+  font-size: 10px;
+  color: #b7b7b7;
+}
+.text-percent {
+  position: absolute;
+  bottom: 33px;
+  font-size: 10px;
+  color: #e64732;
+}
+.donut-layer {
+  position: absolute;
+  margin: 4px 30px 0px 30px;
+}
+
+[data-donutty] {
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 768px) {
+  .payment-estimation {
+    justify-content: center;
+  }
+}
+
+a {
+  color: #0ebeff;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
 .donut-container {
   background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

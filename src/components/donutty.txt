@@ -51,3 +51,13 @@ border-radius: 50%;
     <!--  Blue top #1  -->
     <div class="donut-layer" data-donutty data-bg=rgba(0, 0, 0, 0.0) data-radius=44 data-thickness=16 data-min=0 data-max=1650 data-value=1210 data-color="#364CEF"></div>
 </div>
+
+
+  <div class="donut-container">
+
+              <div class="donut-layer" data-donutty data-bg="rgba(70, 130, 180, 0.15)" data-radius='44' data-thickness='16' data-min='0' data-max='1650' data-value='1650' data-color="#F17270"></div>
+
+              <div class="donut-layer" data-donutty data-bg='rgba(0, 0, 0, 0.0)' data-radius='44' data-thickness='16' data-min='0' data-max='1650' data-value='1480' data-color="#39E0F0"></div>
+
+              <div class="donut-layer" data-donutty data-bg='rgba(0, 0, 0, 0.0)' data-radius='44' data-thickness='16' data-min='0' data-max='1650' data-value='1210' data-color="#364CEF"></div>
+            </div>

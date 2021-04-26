@@ -1,1 +1,53 @@
-@import "./styles/styles.scss";
+@import './styles/styles.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
+.menu {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+#app {
+  margin-top: 40px;
+}
+.circle-heading {
+  font-size: 12px;
+  color: #b7b7b7;
+  background-color: #b7b7b7;
+  font-weight: lighter;
+}
+#progressInput {
+  margin: 20px auto;
+  width: 60%;
+}
+
+.circle-background,
+.circle-progress,
+.circle-progress2 {
+  fill: none;
+}
+
+.circle-background {
+  stroke: #e76766;
+}
+
+.circle-progress {
+  stroke: #433eed;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.circle-progress2 {
+  stroke: #47dbee;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.circle-text {
+  font-size: 1.3em;
+  font-weight: 700;
+  fill: black;
+}

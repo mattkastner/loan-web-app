@@ -17,20 +17,24 @@ export default class CalculatorForm extends Component {
       <div className="calculator-form">
         <div className="calculator-form__input">
           <label>Home Price</label>
-          <input className="" value={this.state.homePrice}/>
+          <input className="" value={this.state.homePrice} />
         </div>
         <div className="calculator-form__input">
           <label>Zip Code</label>
-          <input className="" value={this.state.zipCode}/>
+          <input className="" value={this.state.zipCode} />
         </div>
         <div className="calculator-form__input">
           <label>Loan program</label>
-          <input className="" value={this.state.loanProgram}/>
+          <input className="" value={this.state.loanProgram} />
+          {/* <select>
+            <option value={this.state.loanProgram}>{this.state.loanProgram}</option>
+          </select> */}
         </div>
-        <br/>
+        <br />
+
         <div className="calculator-form__input">
           <label>Down payment</label>
-          <CalcSlider max={100}></CalcSlider>
+          <CalcSlider max={90}></CalcSlider>
           <div className="range">
             <p>0%</p>
             <p>90%</p>
@@ -53,6 +57,7 @@ export default class CalculatorForm extends Component {
           </div>
         </div>
       </div>
+
     );
   }
 }
