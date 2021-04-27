@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@import "/src/styles/variables";
 
 .lender-rates-container {
   padding: 4%;
@@ -14,6 +14,136 @@
   font-size: 15px;
   font-weight: 100;
 }
+
+.lenders {
+  padding: 2%;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.mortgage-company {
+  position: relative;
+}
+
+.mortgage-company-placeholder {
+  background-color: white;
+  height: 65px;
+  width: 93px;
+  position: relative;
+  border-radius: 8%;
+  box-shadow: $shifted-box-shadow;
+}
+
+.company-logo {
+  //   height: 4rem;
+  //   width: 6rem;
+  height: 55px;
+  width: 83px;
+  z-index: 1;
+  border-radius: 8%;
+  position: absolute;
+  bottom: 6px;
+  right: 42px;
+}
+
+.honcho-profile {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -8%;
+  right: 22%;
+  z-index: 3;
+}
+
+.nmls {
+  font-size: 6px;
+  position: absolute;
+  text-align: center;
+  bottom: 18%;
+  left: 6%;
+  z-index: 1;
+}
+
+.company-rate-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.company-rate {
+  color: #b7b7b7;
+  font-size: 8px;
+  text-align: center;
+  align-items: center;
+}
+
+.rate-num {
+  color: black;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.payment {
+  color: black;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.rate-lock {
+  color: black;
+  font-size: 8px;
+}
+
+.rate-payment {
+  color: #b7b7b7;
+  font-size: 8px;
+  text-align: center;
+}
+
+.rate-button {
+  background-color: $background-primary;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 0.2em;
+  padding: 8px 8px;
+  box-shadow: $shifted-box-shadow;
+  height: 25px;
+  width: 75px;
+}
+
+hr {
+  background-color: #e7e9f3;
+  width: 100%;
+  align-items: center;
+  height: 0.1vh;
+  border: none;
+}
+
+.or {
+  color: #b7b7b7;
+  text-align: center;
+  padding: 5%;
+}
+
+.competing-button-container {
+  text-align: center;
+}
+
+.competing-button {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 3px solid #4770ff;
+  color: #4770ff;
+  outline: none;
+  height: 50px;
+  width: 90%;
+  font-size: 20px;
+  font-weight: 500;
+}
+
 
 .toggle-buttons {
   position: relative;
@@ -103,119 +233,4 @@ input:checked + .slider .off {
 .slider.round:before {
   border-radius: 50%;
   border: solid #f17270 1px;
-}
-
-.lenders {
-  padding: 3%;
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-}
-
-.mortgage-company {
-  position: relative;
-}
-
-.company-logo {
-  //   height: 4rem;
-  //   width: 6rem;
-  height: 55px;
-  width: 83px;
-  z-index: 1;
-  border-radius: 8%;
-  box-shadow: $shifted-box-shadow;
-}
-
-.honcho-profile {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -8%;
-  right: 25%;
-  z-index: 3;
-}
-
-.nmls {
-  font-size: 6px;
-  position: absolute;
-  text-align: center;
-  bottom: 18%;
-  left: 6%;
-}
-
-.company-rate-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.company-rate {
-  color: #b7b7b7;
-  font-size: 8px;
-  text-align: center;
-}
-
-.rate-num {
-  color: black;
-  font-size: 10px;
-  font-weight: 500;
-}
-
-.payment {
-  color: black;
-  font-size: 10px;
-  font-weight: 500;
-}
-
-.rate-lock {
-  color: black;
-  font-size: 8px;
-}
-
-.rate-payment {
-  color: #b7b7b7;
-  font-size: 8px;
-  text-align: center;
-}
-
-.rate-button {
-  background-color: $background-primary;
-  border-radius: 5px;
-  border: none;
-  color: white;
-  font-size: 0.2em;
-  padding: 8px 8px;
-  box-shadow: $shifted-box-shadow;
-  height: 25px;
-  width: 75px;
-}
-
-hr {
-  background-color: #e7e9f3;
-  width: 100%;
-  align-items: center;
-  height: 0.1vh;
-  border: none;
-}
-
-.or {
-  color: #b7b7b7;
-  text-align: center;
-  padding: 5%;
-}
-
-.competing-button-container {
-  text-align: center;
-}
-
-.competing-button {
-  background-color: #ffffff;
-  border-radius: 10px;
-  border: 3px solid #4770ff;
-  color: #4770ff;
-  outline: none;
-  height: 50px;
-  width: 90%;
-  font-size: 20px;
-  font-weight: 500;
 }
