@@ -1,4 +1,5 @@
-var api = require("./backend/getdata");
+var getdata = require("./backend/getdata");
+var sendmail = require("./backend/sendmail");
 
 var express = require("express");
 var path = require("path");
@@ -22,7 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // get api
-app.get("/api", api);
+app.get("/getdata", getdata);
+app.get("/sendmail", sendmail);
 
 // error handler
 app.use(function(err, req, res, next) {

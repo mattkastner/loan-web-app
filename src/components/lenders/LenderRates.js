@@ -59,7 +59,7 @@ class LenderRates extends Component {
 
     this.componentDidMount = () => {
       axios
-        .get("http://localhost:5000/api")
+        .get("http://localhost:5000/getdata")
         .then((res) => {
           // console.log(res);
           let ldata = res.data.rows;
