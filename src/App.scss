@@ -5,8 +5,16 @@
 body {
   font-family: "Roboto", sans-serif !important;
 }
+
+.loan-app__container {
+  display: flex;
+  justify-content: center;
+}
+
 .loan-app {
   min-height: 100vh;
+  width: 500px;
+  border: 1px solid rgba(152, 152, 152, 0.105);
 }
 .menu {
   position: absolute;

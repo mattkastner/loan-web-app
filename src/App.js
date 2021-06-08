@@ -15,7 +15,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div class="loan-app__container">
         <Switch>
           <Route path="/contact-agent" component={ContactAgent} />
           <Route exact path="/" component={CalculatorCombo}>
