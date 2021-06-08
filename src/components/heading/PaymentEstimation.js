@@ -65,25 +65,25 @@ class PaymentEstimation extends Component {
               <span>&nbsp;</span>
             </div>
             <div className="grid">
-              <span class="light-gray">Loan Amount</span>
+              <span className="light-gray">Loan Amount</span>
               <span id="table">${Math.trunc(this.props.homePrice)}</span>
             </div>
             <div className="grid">
-              <span class="light-gray">Down payment</span>
+              <span className="light-gray">Down payment</span>
               <span id="table">
                 ${Math.trunc(this.props.downPayment * this.props.homePrice)}
               </span>
             </div>
             <div className="grid">
-              <span class="light-gray">Interest rate</span>
+              <span className="light-gray">Interest rate</span>
               <span id="table">{this.props.interestRate.toFixed(2)}%</span>
             </div>
             <div className="grid">
-              <span class="light-gray">Loan term</span>
+              <span className="light-gray">Loan term</span>
               <span id="table">{this.props.years} years</span>
             </div>
             <div className="grid  property-tax">
-              <span class="light-gray">Property tax</span>
+              <span className="light-gray">Property tax</span>
               <span id="table">${Math.trunc(taxesAmount * 12)}/year</span>
             </div>
           </>

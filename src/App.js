@@ -1,10 +1,10 @@
 import "./App.scss";
-import CalculatorForm from "./components/calculator-form/CalculatorForm";
-import PaymentEstimation from "./components/heading/PaymentEstimation";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import CalculatorCombo from "./components/CalculatorCombo";
 import ContactAgent from "./components/contact-agent/ContactAgent";
+
+import { Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
-import { ArrowLeft } from "react-feather";
+// import { ArrowLeft } from "react-feather";
 
 class App extends Component {
   constructor() {
@@ -15,30 +15,13 @@ class App extends Component {
   }
   render() {
     return (
-      <Router>
+      <div>
         <Switch>
-          <Route exact path="/">
-            <div className="loan-app">
-              {/* {this.state.isOpen ? (
-                <div className="menu">
-                  <div className="arrow">
-                    <ArrowLeft color="gray" />
-                  </div>
-                </div>
-              ) : null} */}
-              <PaymentEstimation
-                updateIsOpen={(value) => this.setState({ isOpen: value })}
-              ></PaymentEstimation>
-              {this.state.isOpen ? (
-                <div></div>
-              ) : (
-                <CalculatorForm></CalculatorForm>
-              )}
-            </div>
-          </Route>
           <Route path="/contact-agent" component={ContactAgent} />
+          <Route exact path="/" component={CalculatorCombo}>
+          </Route>
         </Switch>
-      </Router>
+      </div>
     );
   }
 }

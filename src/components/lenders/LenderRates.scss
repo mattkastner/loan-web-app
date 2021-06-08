@@ -1,0 +1,198 @@
+@import "../../styles/variables.scss";
+
+.lender-rates-container {
+  padding: 0 10px;
+  font-family: "Roboto";
+  font-weight: 100 lighter;
+  padding-bottom: 100px;
+  .header-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+    h4 {
+      color: #b7b7b7;
+      display: block;
+      width: 220px;
+      padding: 10px 4px;
+      font-size: 12px;
+      font-weight: 100;
+    }
+
+    .toggles {
+      .toggle-margin {
+        margin-top: 10px;
+      }
+      .toggle,
+      .toggle-on {
+        height: 15px;
+        width: 67px;
+        border-radius: 15px;
+        box-shadow: $shifted-box-shadow;
+        background: rgb(186, 186, 186);
+        transition: background-color 300ms;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        p {
+          letter-spacing: 0.3px;
+          color: gray;
+          font-size: 10px;
+          position: absolute;
+          right: 5px;
+          top: 3px;
+        }
+
+        &__dot {
+          border: 1px solid rgb(186, 186, 186);
+          position: absolute;
+          top: -4px;
+          right: 46px;
+          height: 20px;
+          width: 20px;
+          box-shadow: $shifted-box-shadow;
+          border-radius: 20px;
+          background: white;
+          transition: right 200ms;
+        }
+      }
+
+      .toggle-on {
+        background: #f17270;
+
+        p {
+          letter-spacing: 0.3px;
+          color: white;
+          font-size: 10px;
+          position: absolute;
+          left: 5px;
+          top: 3px;
+        }
+
+        &__dot {
+          border: 1px solid #f17270;
+          top: -4px;
+          right: -1px;
+          left: auto;
+        }
+      }
+    }
+  }
+
+  .lender {
+    padding: 4px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  .mortgage-company {
+    position: relative;
+  }
+
+  .company-logo {
+    //   height: 4rem;
+    //   width: 6rem;
+    height: 55px;
+    width: 83px;
+    z-index: 1;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: $shifted-box-shadow;
+  }
+
+  .honcho-profile {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2px;
+    right: 38px;
+    z-index: 3;
+    object-fit: cover;
+  }
+
+  .nmls {
+    font-size: 6px;
+    position: absolute;
+    text-align: center;
+    bottom: -5px;
+    left: 6px;
+  }
+
+  .company-rate-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .company-rate {
+    color: #b7b7b7;
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .rate-num {
+    color: black;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .payment {
+    color: black;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .rate-lock {
+    color: black;
+    font-size: 8px;
+  }
+
+  .rate-payment {
+    color: #b7b7b7;
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .rate-button {
+    background-color: $background-primary;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 0.2em;
+    padding: 8px 8px;
+    box-shadow: $shifted-box-shadow;
+    height: 25px;
+    width: 75px;
+  }
+
+  hr {
+    background-color: #e7e9f3;
+    width: 100%;
+    align-items: center;
+    height: 0.1vh;
+    border: none;
+  }
+
+  .or {
+    color: #b7b7b7;
+    text-align: center;
+    padding: 5%;
+  }
+
+  .competing-button-container {
+    text-align: center;
+  }
+
+  .competing-button {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #4770ff;
+    color: #4770ff;
+    outline: none;
+    height: 50px;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
