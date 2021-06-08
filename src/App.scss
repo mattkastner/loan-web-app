@@ -1,80 +1,82 @@
 @import "./styles/styles.scss";
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 body {
-  font-family: "Roboto", sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
 }
 
 .loan-app__container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .loan-app {
-  min-height: 100vh;
-  width: 500px;
-  border: 1px solid rgba(152, 152, 152, 0.105);
+    min-height: 100vh;
+    width: 500px;
+    border: 1px solid rgba(152, 152, 152, 0.105);
 }
+
 .menu {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  height: 40px;
-  width: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  .arrow {
-    height: 100%;
-    width: 100%;
-    background: rgba(128, 128, 128, 0.144);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:hover {
-      background: rgba(128, 128, 128, 0.048);
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    .arrow {
+        height: 100%;
+        width: 100%;
+        background: rgba(128, 128, 128, 0.144);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background: rgba(128, 128, 128, 0.048);
+        }
     }
-  }
 }
 
 #app {
-  margin-top: 40px;
+    margin-top: 40px;
 }
+
 .circle-heading {
-  font-size: 12px;
-  color: #b7b7b7;
-  background-color: #b7b7b7;
-  font-weight: lighter;
+    font-size: 12px;
+    color: #b7b7b7;
+    background-color: #b7b7b7;
+    font-weight: lighter;
 }
+
 #progressInput {
-  margin: 20px auto;
-  width: 60%;
+    margin: 20px auto;
+    width: 60%;
 }
 
 .circle-background,
 .circle-progress,
 .circle-progress2 {
-  fill: none;
+    fill: none;
 }
 
 .circle-background {
-  stroke: #e76766;
+    stroke: #e76766;
 }
 
 .circle-progress {
-  stroke: #433eed;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+    stroke: #433eed;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
+
 .circle-progress2 {
-  stroke: #47dbee;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+    stroke: #47dbee;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .circle-text {
-  font-size: 1.3em;
-  font-weight: 700;
-  fill: black;
+    font-size: 1.3em;
+    font-weight: 700;
+    fill: black;
 }

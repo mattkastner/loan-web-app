@@ -12,6 +12,18 @@ class ContactAgent extends Component {
     super();
   }
 
+  state = {
+    email: null,
+  };
+
+  componentDidMount = () => {
+    let email = localStorage.getItem("email");
+
+    this.setState({ email });
+
+    console.log(email);
+  };
+
   render() {
     return (
       <div className="container">
@@ -47,7 +59,9 @@ class ContactAgent extends Component {
         <br />
         <div className="checkboxDiv">
           <input type="checkbox" className="checkbox"></input>
-          <h2 className="checkbox-info">I want financing information</h2>
+          <h2 className="checkbox-info">
+            I want financing information {this.state.email}
+          </h2>
         </div>
         <br />
         <span className="description-last">

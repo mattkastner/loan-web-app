@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import axios from "axios";
 import "./LenderRates.scss";
 
 class LenderRates extends Component {
@@ -9,70 +10,92 @@ class LenderRates extends Component {
       toggleOnFHA: false,
       toggleOnVA: false,
       lenders: [
-        {
-          id: 1,
-          companyImage:
-            "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg",
-          repImage:
-            "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-          rate: 3.75,
-          rateType: "",
-          payment: 975,
-          NMLS: "478246",
-        },
-        {
-          id: 2,
-          companyImage:
-            "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg",
-          repImage:
-            "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-          rate: 3.75,
-          rateType: "",
-          payment: 975,
-          NMLS: "478246",
-        },
-        {
-          id: 3,
-          companyImage:
-            "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg",
-          repImage:
-            "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-          rate: 3.75,
-          rateType: "",
-          payment: 975,
-          NMLS: "478246",
-        },
-        {
-          id: 4,
-          companyImage:
-            "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg",
-          repImage:
-            "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-          rate: 3.75,
-          rateType: "",
-          payment: 975,
-          NMLS: "478246",
-        },
+        // {
+        //   id: 1,
+        //   companyImage:
+        //     "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg",
+        //   repImage:
+        //     "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        //   rate: 3.75,
+        //   rateType: "",
+        //   payment: 975,
+        //   NMLS: "478246",
+        // },
+        // {
+        //   id: 2,
+        //   companyImage:
+        //     "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg",
+        //   repImage:
+        //     "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        //   rate: 3.75,
+        //   rateType: "",
+        //   payment: 975,
+        //   NMLS: "478246",
+        // },
+        // {
+        //   id: 3,
+        //   companyImage:
+        //     "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg",
+        //   repImage:
+        //     "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        //   rate: 3.75,
+        //   rateType: "",
+        //   payment: 975,
+        //   NMLS: "478246",
+        // },
+        // {
+        //   id: 4,
+        //   companyImage:
+        //     "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg",
+        //   repImage:
+        //     "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        //   rate: 3.75,
+        //   rateType: "",
+        //   payment: 975,
+        //   NMLS: "478246",
+        // },
       ],
+    };
+
+    this.componentDidMount = () => {
+      axios
+        .get("http://localhost:5000/api")
+        .then((res) => {
+          // console.log(res);
+          let ldata = res.data.rows;
+          this.setState({ lenders: ldata });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     };
   }
   render() {
     let lenders = this.state.lenders.map((lender) => {
+      // console.log(lender);
       return (
         <div key={lender.id}>
           <div className="lender">
             <div className="mortgage-company">
               <img
                 className="company-logo"
-                src={lender.companyImage}
+                src={
+                  lender.companyimage == 0
+                    ? "https://assets.entrepreneur.com/content/3x2/2000/20150805204041-google-company-building-corporate.jpeg"
+                    : lender.companyimage
+                }
                 alt="company"
               />
               <img
                 className="honcho-profile"
-                src={lender.repImage}
+                src={
+                  lender.profile == 0
+                    ? "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                    : lender.profile
+                }
                 alt="company-representative"
               />
-              <div className="nmls">NMLS#: {lender.NMLS}</div>
+              <div className="nmls">NMLS#: {lender.loantype}</div>
             </div>
             <div className="company-rate-container">
               <div className="company-rate">
@@ -82,10 +105,13 @@ class LenderRates extends Component {
               </div>
               <div className="rate-payment">
                 Payment
-                <div className="payment">${lender.payment}/mo.</div>
+                <div className="payment">${lender.rate}/mo.</div>
               </div>
               <button
-                onClick={() => this.props.history.push("/contact-agent")}
+                onClick={() => {
+                  localStorage.setItem("email", lender.email);
+                  this.props.history.push(`/contact-agent`);
+                }}
                 className="rate-button"
               >
                 Use Rate
