@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 module.exports = (req, res, next) => {
     const html = `https://docs.google.com/spreadsheets/d/e/2PACX-1vT2xjQIHvmoFTYA-vcir1VIyG3JrS61LEu4qAIbVycsBxtO4i_GYiGvigEhY7FG5AmlZR67L2qP96Z7/pubhtml`;
     (async() => {
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({ ignoreDefaultArgs: ['--disable-extensions'] });
         const page = await browser.newPage();
         await page.goto(html);
 
