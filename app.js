@@ -23,8 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // get api
-app.get("/getdata", getdata);
-app.post("/sendmail", sendmail);
+app.get("/api/getdata", getdata);
+app.post("/api/sendmail", sendmail);
 
 // error handler
 app.use(function(err, req, res, next) {
