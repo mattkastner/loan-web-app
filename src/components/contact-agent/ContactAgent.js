@@ -37,7 +37,7 @@ class ContactAgent extends Component {
     const { email, name, phoneNum, getfinanceInfo, textFeild } = this.state;
 
     axios
-      .post("http://localhost:5000/sendmail", {
+      .post("/api/sendmail", {
         email,
         name,
         phoneNum,
