@@ -77,8 +77,6 @@ class LenderRates extends Component {
         });
       }
     }
-    let lendersData = ldata.filter((ld) => ld.LoanType.toLowerCase() == "fha");
-    // console.log(ldata)
   };
   render() {
     let lenders =
