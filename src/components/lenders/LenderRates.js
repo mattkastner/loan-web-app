@@ -118,7 +118,7 @@ class LenderRates extends Component {
                   </div>
                   <button
                     onClick={() => {
-                      localStorage.setItem("email", lender.email);
+                      localStorage.setItem("email", lender.Email);
                       this.props.history.push(`/contact-agent`);
                     }}
                     className="rate-button"

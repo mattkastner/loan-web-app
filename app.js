@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 
 // get api
 app.get("/getdata", getdata);
-app.get("/sendmail", sendmail);
+app.post("/sendmail", sendmail);
 
 // error handler
 app.use(function(err, req, res, next) {
